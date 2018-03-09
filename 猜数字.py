@@ -20,16 +20,18 @@ s = 1
 #while True:
 while s <= 2:
         temp = int(input('猜一个数字：'))
-        s += 1
+
         if number == temp:
                 print('恭喜你猜对了！')
                 print("你猜了%d次"%s)
                 break
         elif number > temp:
+                s += 1
                 print('小了')
         elif number < temp:
+                s += 1
                 print('大了')
         elif temp.isdigit():
                 continue
 else:
-        print('超过2次，游戏结束，正确的数字是:%d'%number)
+        print('已经猜了2次，游戏结束，正确的数字是:%d'%number)
